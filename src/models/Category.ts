@@ -14,12 +14,12 @@ Category.init({
     allowNull: false,
   },
   created_at: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
+    type: 'TIMESTAMP',
+    defaultValue: new Date().toISOString(),
   },
   updated_at: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
+    type: 'TIMESTAMP',
+    defaultValue: new Date().toISOString(),
   },
 }, {
   sequelize,
