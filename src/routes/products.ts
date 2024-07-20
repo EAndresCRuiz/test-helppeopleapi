@@ -5,9 +5,14 @@ const router = Router();
 
 router.post('/products', async (req, res) => {
     try {
+        console.log("holaaaaaaaaaaaa!!");
+        console.log(req.body);
+        
         const product = await Product.create(req.body);
         res.status(201).json(product);
     } catch (err) {
+        console.log(err);
+        
         if (err instanceof Error) {
             res.status(400).json({ error: err.message });
         } else {
